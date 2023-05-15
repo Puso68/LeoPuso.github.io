@@ -93,3 +93,17 @@ function allCaps() {
   }
 
 }
+
+function resetFields() {
+  var textarea = document.getElementById("input-text");
+  textarea.value = ""; // Reset the textarea's value
+
+  var fieldset = document.querySelector("fieldset");
+  fieldset.innerHTML = `
+    <legend>Text to Encrypt</legend>
+    <textarea id="input-text" rows="10" cols="60" placeholder="Enter your message to encrypted here"></textarea>
+  `;
+
+  var resultElement = document.getElementById("result");
+  resultElement.textContent = "";
+}
